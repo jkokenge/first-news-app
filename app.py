@@ -10,10 +10,6 @@ csv_obj = csv.DictReader(open(csv_path, 'r'))
 csv_list = list(csv_obj)
 csv_dict = dict( [ [o['id'], o ] for o in csv_list ] )
 
-
-
-
-
 @app.route("/")
 def index():
 	return render_template('index.html', 
