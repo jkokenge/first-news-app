@@ -45,7 +45,8 @@
                   "type": "Feature",
                   "properties": {
                     "full_name": "{{ obj.full_name }}",
-                    "id": "{{ obj.id }}"
+                    "id": "{{ obj.id }}",
+                    "age": "{{ obj.age }}"
                   },
                   "geometry": {
                     "type": "Point",
@@ -59,7 +60,8 @@
                 onEachFeature: function(feature, layer) {
                     layer.bindPopup(
                         '<a href="' + feature.properties.id + '/">' +
-                            feature.properties.full_name +
+                            feature.properties.full_name + ", age: " +
+                            feature.properties.age + 
                         '</a>'
                     );
                 }
